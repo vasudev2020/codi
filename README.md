@@ -10,6 +10,7 @@ spacy
 nltk
 torch
 transformers
+sentence_transformers
 os
 json
 pickle
