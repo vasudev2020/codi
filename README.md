@@ -1,14 +1,12 @@
 # codi
 
 ## 1. Installing Dependencies
+```
 conda create --name _env_ python=3.9
-
 conda install -n _env_ pip
-
 conda activate _env_
-
 pip install -r requirements.txt
-
+```
 You will need to download the English language model for SpaCy. You can do this by running the following command from the terminal:
 
 `python -m spacy download en_core_web_sm`
