@@ -78,19 +78,20 @@ class Baseline:
             acc = mlp.score(TeX,TeY)
             print(dataset,acc)
 
-# model_type = "SimCSE"
-# model_name = "princeton-nlp/sup-simcse-roberta-large"
-# # model_name = "princeton-nlp/sup-simcse-roberta-base"
+model_type = "SimCSE"
+model_name = "princeton-nlp/sup-simcse-roberta-large"
+# model_name = "princeton-nlp/sup-simcse-roberta-base"
+print(f"{model_type}: {model_name}")
+B = Baseline(modeltype=model_type, modelname=model_name)
+B.Evaluate()
 
 # model_type = 'mbert'
 # model_name = 'answerdotai/ModernBERT-base'
 
 model_type = 'sbert'
 model_name = 'sentence-transformers/all-mpnet-base-v2'
-
 print(f"{model_type}: {model_name}")
 B = Baseline(modeltype=model_type, modelname=model_name)
-
 B.Evaluate()
 
 
