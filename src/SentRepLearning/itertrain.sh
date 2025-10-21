@@ -7,9 +7,9 @@ size=100000
 
 # # Train models
 # for init_model in 'glove' 'roberta' 'llama'; do
-# for init_model in 'glove' 'roberta'; do
-#     sbatch -J codi -p compute --mem $mem -t 2-0 --gres=$gpu --cpus-per-task=8 --output=$init_model'-'$size'.out' --wrap="python3 -u IterTrain.py --size $size --init_model $init_model"
-# done
+for init_model in 'glove' 'roberta'; do
+    sbatch -J codi -p compute --mem $mem -t 2-0 --gres=$gpu --cpus-per-task=8 --output=$init_model'-'$size'.out' --wrap="python3 -u IterTrain.py --size $size --init_model $init_model"
+done
 
 # # Train for ablation study
 # for init_model in 'glove' 'roberta'; do
